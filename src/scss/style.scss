@@ -1,0 +1,208 @@
+@import 'common.scss';
+@import '_minix.scss';
+.wrap {
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+footer {
+    width: 100%;
+    height: .45rem;
+    background: pink;
+}
+
+section {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.main {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    font-size: 14px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: .16rem;
+    background: #fff;
+}
+
+.content {
+    width: 100%;
+    height: .45rem;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .input {
+        width: 90%;
+        height: .3rem;
+        font-size: .14rem;
+        background: #ccc;
+        border-radius: .1rem;
+        line-height: .3rem;
+        padding-left: .1rem;
+        color: #eee;
+    }
+}
+
+section {
+    .swiper-slide {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background: #fff;
+        dl {
+            margin-top: .1rem;
+            width: 20%;
+            font-size: .14rem;
+            text-align: center;
+            dt {
+                width: 80%;
+                margin: 0 auto;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.flow {
+    .group {
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        font-size: .14rem;
+        text-align: center;
+        margin: 0 auto;
+        overflow: hidden;
+        background: #fff;
+        padding-top: .2rem;
+        margin-top: .1rem;
+        border-radius: .1rem;
+        dl {
+            width: 25%;
+            padding-left: .1rem;
+            dt {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        p {
+            width: 10%;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    font-size: .14rem;
+    background: #fff;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        li {
+            &.active {
+                color: orange;
+            }
+        }
+    }
+}
+
+.content {
+    width: 100%;
+    height: .45rem;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .input {
+        width: 90%;
+        height: .3rem;
+        font-size: .14rem;
+        background: #eee;
+        border-radius: .1rem;
+        line-height: .3rem;
+        padding-left: .1rem;
+        color: #ccc;
+    }
+}
+
+section {
+    position: relative;
+    .swiper-slide {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background: #fff;
+        dl {
+            margin-top: .1rem;
+            width: 20%;
+            font-size: .14rem;
+            text-align: center;
+            dt {
+                width: 80%;
+                margin: 0 auto;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.flows {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    background: #fff;
+    .groups {
+        font-size: .14rem;
+        position: relative;
+        &:after {
+            content: attr(up);
+            width: 100%;
+            height: 44px;
+            background: pink;
+            display: block;
+            position: absolute;
+            bottom: -44px;
+            left: 0;
+            text-align: center;
+            line-height: 44px;
+        }
+        dl {
+            font-size: .14rem;
+            display: flex;
+            padding: .1rem 0;
+            border-bottom: 1px solid #ccc;
+            dt {
+                flex: 3;
+                img {
+                    width: 80%;
+                }
+            }
+            dd {
+                flex: 7;
+                padding-left: .2rem;
+                padding-top: .2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="swiper/css/swiper.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <p>美团外卖</p>
+            <p><i class="iconfont icon-share"></i></p>
+        </header>
+        <div class="content">
+            <div class="input">
+                <i class="iconfont icon-fangdajing"></i>米线
+            </div>
+        </div>
+        <section>
+            <div class="main">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <dl>
+                                <dt><img src="images/1.png" alt=""></dt>
+                                <dd>美食</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/2.png" alt=""></dt>
+                                <dd>超市便利</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/3.png" alt=""></dt>
+                                <dd>生鲜果蔬</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/4.png" alt=""></dt>
+                                <dd>美团专送</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/5.png" alt=""></dt>
+                                <dd>跑腿代购</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/6.png" alt=""></dt>
+                                <dd>早餐</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/7.png" alt=""></dt>
+                                <dd>甜点饮品</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/8.png" alt=""></dt>
+                                <dd>家常菜</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/9.png" alt=""></dt>
+                                <dd>减免配送费</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/10.png" alt=""></dt>
+                                <dd>品牌连锁</dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide">
+                            <dl>
+                                <dt><img src="images/1.png" alt=""></dt>
+                                <dd>美食</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/2.png" alt=""></dt>
+                                <dd>超市便利</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/3.png" alt=""></dt>
+                                <dd>生鲜果蔬</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/4.png" alt=""></dt>
+                                <dd>美团专送</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/5.png" alt=""></dt>
+                                <dd>跑腿代购</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/6.png" alt=""></dt>
+                                <dd>早餐</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/7.png" alt=""></dt>
+                                <dd>甜点饮品</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/8.png" alt=""></dt>
+                                <dd>家常菜</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/9.png" alt=""></dt>
+                                <dd>减免配送费</dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/10.png" alt=""></dt>
+                                <dd>品牌连锁</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination" id="pageTion"></div>
+                </div>
+                <div class="flows">
+                    <div class="groups" up="上拉加载">
+                        <!-- <dl>
+                            <dt><img src="images/a1.png" alt=""></dt>
+                            <dd>红烧狮子头</dd>
+                        </dl> -->
+                    </div>
+                </div>
+            </div>
+            <div class="main" style="display:none">订单</div>
+            <div class="main" style="display:none">我的</div>
+        </section>
+        <footer>
+            <ul>
+                <li class="active">
+                    <p><i class="iconfont icon-shouye"></i></p>
+                    <p>首页</p>
+                </li>
+                <li>
+                    <p><i class="iconfont icon-shouye"></i></p>
+                    <p>订单</p>
+                </li>
+                <li>
+                    <p><i class="iconfont icon-shouye"></i></p>
+                    <p>我的</p>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script src="js/rem.js"></script>
+    <script src="swiper/js/swiper.js"></script>
+    <script src="js/bscroll.js"></script>
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: true,
+            direction: "horizontal",
+            autoplay: {
+                delay: 1000
+            },
+            loop: true,
+            pagination: {
+                el: "#pageTion",
+                clickable: true
+            }
+        })
+
+        var scroll = new BScroll('.flows', {
+            probeType: 2,
+            click: true
+        })
+
+        $.ajax({
+            url: './mock/list.json',
+            success: function(data) {
+                render(data);
+            }
+        })
+
+        $('footer ul li').on('click', function() {
+            $(this).addClass('active').siblings().removeClass('active')
+            var index = $(this).index();
+            $('.main').eq(index).show().siblings().hide();
+        })
+
+        function render(data) {
+            var str = '';
+            $.each(data, function(i, val) {
+                str += `<dl>
+                            <dt><img src="./images/${val.url}" alt=""></dt>
+                            <dd>${val.title}</dd>
+                        </dl>`
+            })
+
+            $('.groups').append(str);
+            scroll.refresh();
+        }
+    </script>
+</body>
+
+</html>

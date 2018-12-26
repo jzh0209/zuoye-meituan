@@ -1,0 +1,403 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font-family: STHeitiSC-Light;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+ins,
+a {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: inline-block;
+}
+
+input,
+textarea {
+  border: none;
+  background: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+  -o-tap-highlight-color: transparent;
+}
+
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  width: 100%;
+  height: .45rem;
+  background: pink;
+}
+
+section {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  font-size: 14px;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: .16rem;
+  background: #fff;
+}
+
+.content {
+  width: 100%;
+  height: .45rem;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content .input {
+  width: 90%;
+  height: .3rem;
+  font-size: .14rem;
+  background: #ccc;
+  border-radius: .1rem;
+  line-height: .3rem;
+  padding-left: .1rem;
+  color: #eee;
+}
+
+section .swiper-slide {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #fff;
+}
+
+section .swiper-slide dl {
+  margin-top: .1rem;
+  width: 20%;
+  font-size: .14rem;
+  text-align: center;
+}
+
+section .swiper-slide dl dt {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section .swiper-slide dl dt img {
+  width: 100%;
+}
+
+.flow .group {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  font-size: .14rem;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  padding-top: .2rem;
+  margin-top: .1rem;
+  border-radius: .1rem;
+}
+
+.flow .group dl {
+  width: 25%;
+  padding-left: .1rem;
+}
+
+.flow .group dl dt img {
+  width: 100%;
+}
+
+.flow .group p {
+  width: 10%;
+}
+
+footer {
+  text-align: center;
+  font-size: .14rem;
+  background: #fff;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer ul li.active {
+  color: orange;
+}
+
+.content {
+  width: 100%;
+  height: .45rem;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content .input {
+  width: 90%;
+  height: .3rem;
+  font-size: .14rem;
+  background: #eee;
+  border-radius: .1rem;
+  line-height: .3rem;
+  padding-left: .1rem;
+  color: #ccc;
+}
+
+section {
+  position: relative;
+}
+
+section .swiper-slide {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #fff;
+}
+
+section .swiper-slide dl {
+  margin-top: .1rem;
+  width: 20%;
+  font-size: .14rem;
+  text-align: center;
+}
+
+section .swiper-slide dl dt {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section .swiper-slide dl dt img {
+  width: 100%;
+}
+
+.flows {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  background: #fff;
+}
+
+.flows .groups {
+  font-size: .14rem;
+  position: relative;
+}
+
+.flows .groups:after {
+  content: attr(up);
+  width: 100%;
+  height: 44px;
+  background: pink;
+  display: block;
+  position: absolute;
+  bottom: -44px;
+  left: 0;
+  text-align: center;
+  line-height: 44px;
+}
+
+.flows .groups dl {
+  font-size: .14rem;
+  display: flex;
+  padding: .1rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.flows .groups dl dt {
+  flex: 3;
+}
+
+.flows .groups dl dt img {
+  width: 80%;
+}
+
+.flows .groups dl dd {
+  flex: 7;
+  padding-left: .2rem;
+  padding-top: .2rem;
+}
